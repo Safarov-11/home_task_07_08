@@ -13,4 +13,5 @@ public interface IProductsService
     void AddDateTimeToProducts();
     void UpdatePricesByCategoryId(int CategoryId,  int percentage);
     List<SumPriceProdsDTO> GetSumPriceOfProductsByMarketId();
+    List<Products> GetProdWithSmallestQoantity();
 }

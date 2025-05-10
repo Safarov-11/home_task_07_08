@@ -1,5 +1,6 @@
 using Dapper;
 using Domain.Entities;
+using Domain.Entities.DTOs;
 using Infrastructure.Data;
 using Infrastructure.Interfaces;
 
@@ -56,12 +57,12 @@ public class UsersService : IUsersService
         }
     }
 
-    public List<Users> GetUserByNameOrEmail(string Name, string Email){
+    public List<Users> GetUserByNameOrEmail(string text){
         using (var connection = context.GetConnection())
         {
             var cmd = @"select * from users
-            where fullname like '%@name%' or email like '%@email%';";
-            var result = connection.Query<Users>(cmd, new {name = Name, email = Email }).ToList();
+            where fullname like @text or email like @text;";
+            var result = connection.Query<Users>(cmd, new {text = $"%{text}%" }).ToList();
             return result;
         }
     }
@@ -71,7 +72,7 @@ public class UsersService : IUsersService
         {
             var cmd = @"
 alter table users 
-add column DataCreated default Current_date;";
+add column DataCreated date default Current_date;";
             
             var result = connection.Execute(cmd);
             
@@ -79,4 +80,25 @@ add column DataCreated default Current_date;";
             
         }
     }
+
+    public List<UsersMarketCount> UsersAndMarketsCount(){
+        using (var connection = context.GetConnection())
+        {
+            var cmd = @"
+select u.fullname, count(m.id) from markets m
+join users u on u.id = m.userId
+group by u.fullname";
+            
+            var result = connection.Query<UsersMarketCount>(cmd).ToList();
+            
+            return result;
+            
+        }
+    }
+
+
 }
+
+
+
+

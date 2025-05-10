@@ -78,12 +78,40 @@ group by c.name";
         {
             var cmd = @"
 alter table category 
-add column DataCreated default Current_date;";
+add column DataCreated date default Current_date;";
             
             var result = connection.Execute(cmd);
             
             System.Console.WriteLine(result==0 ? "Sucssesfuly added column date" : "Failed");
             
+        }
+    }
+
+    public List<Top3Category> GetTop3Categories(){
+        using (var connection = context.GetConnection())
+        {
+            var cmd = @"
+            select c.name, count(p.id) from products p
+join category c on c.id = p.categoryId
+group by c.name 
+order by count(p.id)
+limit 3";
+
+        var result = connection.Query<Top3Category>(cmd).ToList();
+        return result;
+        }
+    }
+
+    public List<CategoryAvgPrice> GetCategoryAvgPrices(){
+        using (var connection = context.GetConnection())
+        {
+            var cmd = @"
+            select c.name, avg(p.price) from products p
+join category c on p.categoryId = c.id
+group by c.name ";
+
+        var result = connection.Query<CategoryAvgPrice>(cmd).ToList();
+        return result;
         }
     }
 

@@ -22,3 +22,4 @@ C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\MainApp\obj\Debug\net9
 C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\MainApp\obj\Debug\net9.0\MainApp.pdb
 C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\MainApp\obj\Debug\net9.0\MainApp.genruntimeconfig.cache
 C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\MainApp\obj\Debug\net9.0\ref\MainApp.dll
+C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\MainApp\obj\Debug\net9.0\MainApp.sourcelink.json

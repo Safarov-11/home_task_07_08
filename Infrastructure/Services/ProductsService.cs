@@ -87,7 +87,7 @@ join markets m on m.id = p.marketId";
         {
             var cmd = @"
 alter table products 
-add column DataCreated default Current_date;";
+add column DataCreated date default Current_date;";
             
             var result = connection.Execute(cmd);
             
@@ -127,6 +127,19 @@ group By p.name, m.name";
         }
     }
 
+    public List<Products> GetProdWithSmallestQoantity(){
+        using (var connection = context.GetConnection())
+        {
+            var cmd = @"
+select * from products 
+where quantity < (select Min(quantity) from products)";
+
+            
+            var result = connection.Query<Products>(cmd).ToList();
+           return result;
+        }
+
+    }
 
     
 }

@@ -8,6 +8,6 @@ public interface IUsersService
     List<Users> GetAllUsers();
     void UpdateUsers(Users user);
     void DeleteUser(int id);
-    List<Users> GetUserByNameOrEmail(string Name, string Email);
+    List<Users> GetUserByNameOrEmail(string text);
     void AddDateTimeToUsers();
 }

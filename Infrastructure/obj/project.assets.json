@@ -239,11 +239,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\.Net (6month)\\class-07-08\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\dapper\\class-07-08\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\.Net (6month)\\class-07-08\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\dapper\\class-07-08\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\.Net (6month)\\class-07-08\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\dapper\\class-07-08\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -258,8 +258,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\admin\\OneDrive\\Desktop\\.Net (6month)\\class-07-08\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\.Net (6month)\\class-07-08\\Domain\\Domain.csproj"
+            "C:\\Users\\admin\\OneDrive\\Desktop\\dapper\\class-07-08\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\dapper\\class-07-08\\Domain\\Domain.csproj"
             }
           }
         }

@@ -162,12 +162,15 @@ foreach (var p in products)
 
 System.Console.WriteLine("\n-----------------------------------\n");
 
-var uss = uServ.GetUserByNameOrEmail("mmmm","safar");
+
+
+var uss = uServ.GetUserByNameOrEmail("safar");
 foreach (var u in uss)
 {
     System.Console.WriteLine($"{u.Id}\t{u.FullName}\t{u.Email}\t{u.Phone}");
 }
 
+System.Console.WriteLine("\n-----------------------------------\n");
 
 var categoryCount = cServ.GetCategoryWithCount();
 foreach (var ct in categoryCount)
@@ -175,6 +178,7 @@ foreach (var ct in categoryCount)
     System.Console.WriteLine($"{ct.Name}\t{ct.CategoryCount}");
 }
 
+System.Console.WriteLine("\n-----------------------------------\n");
 
 pServ.UpdatePricesByCategoryId(2,20);
 var prodAfterUpdate = pServ.GetAllProducts();
@@ -183,6 +187,7 @@ foreach (var p in prodAfterUpdate)
     System.Console.WriteLine($"{p.Id}\t{p.Name}\t{p.Price}\t{p.CategoryId}\t{p.MarketId}\t{p.Quantity}");
 }
 
+System.Console.WriteLine("\n-----------------------------------\n");
 
 
 var SumPriceProds = pServ.GetSumPriceOfProductsByMarketId();
@@ -190,6 +195,47 @@ foreach (var p in SumPriceProds)
 {
     System.Console.WriteLine($"{p.ProductName}\t{p.MarketName}\t{p.SumPrice}");
 }
+
+
+// uServ.AddDateTimeToUsers();
+// cServ.AddDateTimeToCategory();
+// mServ.AddDateTimeToMarket();
+// pServ.AddDateTimeToProducts();
+
+System.Console.WriteLine("\n-----------------------------------\n");
+
+// mServ.CreateNewColumnforUserId();
+// mServ.AddUserToMarket(1,1);
+// mServ.AddUserToMarket(2,2);
+// mServ.AddUserToMarket(3,3);
+
+System.Console.WriteLine("\n-----------------------------------\n");
+
+var usersMCount = uServ.UsersAndMarketsCount();
+foreach (var u in usersMCount)
+{
+    System.Console.WriteLine($"{u.UserName}\t{u.MarketCount}");
+}
+
+System.Console.WriteLine("\n-----------------------------------\n");
+
+var listpr = pServ.GetProdWithSmallestQoantity();
+if(listpr != null){
+    foreach (var p in listpr)
+    {
+        System.Console.WriteLine($"{p.Id}\t{p.Name}\t{p.Price}\t{p.CategoryId}\t{p.MarketId}\t{p.Quantity}");
+    }
+}
+else System.Console.WriteLine("Empty list");
+
+System.Console.WriteLine("\n-----------------------------------\n");
+
+
+
+
+
+
+
 
 
 

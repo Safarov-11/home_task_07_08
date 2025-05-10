@@ -13,3 +13,4 @@ C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\Infrastructure\obj\Deb
 C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+C:\Users\admin\OneDrive\Desktop\.Net (6month)\class-07-08\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json

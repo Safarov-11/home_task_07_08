@@ -11,4 +11,6 @@ public interface ICategoryService
     void DeleteCategory(int id);
     List<CategoryDTO> GetCategoryWithCount();
     void AddDateTimeToCategory();
+    List<Top3Category> GetTop3Categories();
+    List<CategoryAvgPrice> GetCategoryAvgPrices();
 }
